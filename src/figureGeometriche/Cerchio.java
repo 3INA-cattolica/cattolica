@@ -19,7 +19,7 @@ public class Cerchio {
         return ritorno;
     }
     
-    public double circonferenza(){
+    public double circonferenza(){ //funzione per calcolare la circenferenza
         double ritorno;
         ritorno = 2* p* r;
         return ritorno;
