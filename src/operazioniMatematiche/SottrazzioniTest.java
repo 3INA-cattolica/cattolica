@@ -16,10 +16,16 @@ public class SottrazzioniTest {
         System.out.println("inserisci il secondo numero :");
         n2 = tastiera.nextDouble();
         
-        Sottrazzione sottrazzione = new Sottrazzione(n1,n2);
-        s = sottrazzione.esegui(); 
+        System.out.println("\n");
         
-        System.out.println("sottrazzione : " + s);
+        Sottrazzione sottrazzione = new Sottrazzione(n1,n2);
+        s = sottrazzione.esegui();
+        n1  = sottrazzione.getN1();
+        n2 = sottrazzione.getN2();
+        String info = sottrazzione.info();
+        
+        System.out.println("info          : " + info);
+        System.out.println("sottrazzione  : " + s);
                 
         }
     
