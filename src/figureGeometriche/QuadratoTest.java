@@ -7,6 +7,7 @@ public class QuadratoTest {
         float area = q1.area();
         float perimetro = q1.perimetro();
         
+        System.out.println("l'area del quadrato è       : " + q1.info());
         System.out.println("l'area del quadrato è       : " + area);
         System.out.println("il perimetro del quadrato è : " + perimetro);
     }
