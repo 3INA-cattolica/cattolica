@@ -1,5 +1,6 @@
 /*
 Dati i dati di un triangolo, stabilire il tipo, perimetro e area
+dati tre segmenti qualsiasi(a,b,c) è possibile costruire un triangolo solo se la lunghezza do ciascuno è minore della somma degli alri due
 */
 package figureGeometriche;
 
