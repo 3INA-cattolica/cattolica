@@ -35,16 +35,33 @@ public class Numero1 {
     
     public String pariODispari(){
        String rit;
-       if(this.n1%2 == 0){
+       if(n1%2 == 0){
            rit = "pari";
        }else{
            rit = "dispari";
        }
+       
        return rit;
     }
     
     public String minoreOMaggiore(){
-        String rit =  " ";
+        String rit;
+        
+        if(this.n1 >= 0)
+            if(this.n1 == 0)
+                rit = "zero";
+            else
+                rit = "positivo";
+        else
+            rit = "negativo";
+        
+        return rit;
+    }
+    
+    
+    public String positivoNegativo0(){
+        String rit = "";
+        
         if(this.n1 == 0){
             rit = "è uguale a zero";
         }
@@ -58,6 +75,19 @@ public class Numero1 {
         }
         
         return rit;
+    }
+    
+    public String pNZ(){
+        String rit = "";
+        if(this.n1 == 0){
+            rit = "uguale a 0";
+        }else if (this.n1 >= 0){
+            rit = "maggiore di 0";
+        }else{
+            rit= "minore di 0";
+        }
+        return rit;
+        
     }
     
 }
