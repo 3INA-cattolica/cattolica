@@ -28,6 +28,10 @@ public class TriangoloTest {
         System.out.println("il perimetro è di: " + t.perimetro());
         System.out.println("l'area è di      : " + t.area());
         System.out.println("il triangolo è   : " + t.tipoV2());
+        if(t.isTriangolo())
+            System.out.println("si");
+        else
+            System.out.println("no");
         System.out.println(t.info());
         
         System.out.print("\n");
@@ -47,6 +51,10 @@ public class TriangoloTest {
         System.out.println("il perimetro è di: " + t.perimetro());
         System.out.println("l'area è di      : " + t.area());
         System.out.println("il triangolo è   : " + t.tipoV2());
+        if(t.isTriangolo())
+            System.out.println("si");
+        else
+            System.out.println("no");
         System.out.println(t.info());
         
         System.out.print("\n");
@@ -66,6 +74,9 @@ public class TriangoloTest {
         System.out.println("il perimetro è di: " + t.perimetro());
         System.out.println("l'area è di      : " + t.area());
         System.out.println("il triangolo è   : " + t.tipoV2());
+        String testo;
+        testo = t.isTriangolo()==true? "si" : "no";
+        System.out.println(testo);
         System.out.println(t.info());
         
     }
