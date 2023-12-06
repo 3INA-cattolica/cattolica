@@ -4,19 +4,28 @@ dati tre segmenti qualsiasi(a,b,c) è possibile costruire un triangolo solo se l
 */
 package figureGeometriche;
 
-
 public class Triangolo {
+    final private double NF_TE;
     private double l1;
     private double l2;
     private double l3;
+    private String unitaMisura;
 
     public Triangolo() {
+        NF_TE= 0.289;
+        unitaMisura = "";
     }
     
     public Triangolo(double l1, double l2, double l3) {
+        this();
         this.l1 = l1;
         this.l2 = l2;
         this.l3 = l3;
+        
+    }
+
+    public double getNF_TE() {
+        return NF_TE;
     }
 
     public double getL1() {
@@ -43,6 +52,14 @@ public class Triangolo {
         this.l3 = l3;
     }
     
+    public String getUnitaMisura() {
+        return unitaMisura;
+    }
+
+    public void setUnitaMisura(String unitaMisura) {
+        this.unitaMisura = unitaMisura;
+    }
+    
     public String info(){
         String testo;
         testo = "\n" + "l1: " + this.l1 + "\n" +
@@ -52,15 +69,19 @@ public class Triangolo {
     }
     
     public double perimetro(){
-        double rit;
-        rit = this.l1 + this.l2 +this.l3;
+        double rit=0;
+        if(tipo().equals("equilatero")||tipo().equals("isoscele")||tipo().equals("scaleno"))
+            rit = this.l1 + this.l2 +this.l3;   
         return rit;
     }
     
     public double area(){
-        double rit;
-        double sp = perimetro()/2;
-        rit = Math.sqrt(sp*(sp -l1)*(sp-l2)*(sp-l3));
+        double rit = 0;
+        if(tipo().equals("equilatero")||tipo().equals("isoscele")||tipo().equals("scaleno")){
+            double sp = perimetro()/2;
+            rit = Math.sqrt(sp*(sp -l1)*(sp-l2)*(sp-l3));
+        }
+        
         return rit;
     }
     
@@ -91,4 +112,27 @@ public class Triangolo {
         
         return tipo;
     }
+    
+    public boolean isTriangolo(){
+        boolean v = false;
+        if((l2+l3>l1)&&(l2< l3+l1)&&(l3<l1+l2))
+            v=true;
+        return v;
+    }
+    
+    public double apotema(){
+        double rit;
+        if(tipo().equals("equilatero"))
+            rit = l1*NF_TE;
+        else
+            rit=0;
+        return rit;
+    }
+    
+    public double altezza(){
+        double rit;
+        rit = apotema()*2;
+        return rit;
+    }
+    
 }
