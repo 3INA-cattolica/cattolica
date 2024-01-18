@@ -28,34 +28,59 @@ public class Test2 {
             System.out.println("5:costruttore con parametri");
             System.out.println("6:per uscire");
             System.out.println("\n");
-            System.out.print("Inserire un numero da 1 a 5:");
+            System.out.print("Inserire un numero da 1 a 6:");
             int n = in.nextInt();
             System.out.println("\n");
             
             
                 switch(n){
                     case 1:
+                        System.out.println("inserire il numero dei lati: ");
+                        nLati = in.nextInt();
+                        p.setNLati(nLati);
+                        System.out.println("inserire il valore dei lati: ");
+                        vLati = in.nextInt();
+                        p.setVLati(vLati);
                         System.out.println(p.isPoligono());
+                        
                         break;
 
                     case 2:
+                        System.out.println("inserire il numero dei lati: ");
+                        nLati = in.nextInt();
+                        p.setNLati(nLati);
+                        System.out.println("inserire il valore dei lati: ");
+                        vLati = in.nextInt();
+                        p.setVLati(vLati);
                         System.out.println(p.tipoPoligono());
                         break;
 
                     case 3:
+                        
+                        System.out.println("inserire il numero dei lati: ");
+                        nLati = in.nextInt();
+                        p.setNLati(nLati);
+                        System.out.println("inserire il valore dei lati: ");
+                        vLati = in.nextInt();
+                        p.setVLati(vLati);
                         System.out.println(p.perimetro());
+                        
+                        
                         break;
                         
                     case 4:
                         p = new PoligonoRegolare();
+                        System.out.println(p.info());
                         
                     case 5:
                         System.out.println("inserire il numero dei lati");
                         nLati = in.nextInt();
                         System.out.println("inserire il valore dei lati");
                         vLati = in.nextInt();
-                        
                         p = new PoligonoRegolare(nLati,vLati);
+                        System.out.println(p.info());
+                        System.out.println(p.perimetro());
+                        
                         
                     case 6:
                         uscita = 0;
@@ -67,6 +92,6 @@ public class Test2 {
             
                
         }while(uscita != 0);
-        
+       
     }
 }
